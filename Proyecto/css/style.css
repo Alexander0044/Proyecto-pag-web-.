@@ -1,0 +1,145 @@
+/* RESET Y TIPOGRAFÍA */
+* { 
+    box-sizing: border-box; 
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif; 
+}
+
+body { 
+    background-color: #fff;
+    color: #222;
+     display: flex;
+      flex-direction: column;
+       min-height: 100vh;
+     }
+
+/* HEADER */
+header {
+    text-align: center;
+    padding: 4rem 1rem 2rem; 
+}
+
+header h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    letter-spacing: -1px;
+    color: #000;
+}
+
+header p {
+    color: #666;
+    margin-top: 0.5rem;
+    font-size: 1.1rem;
+}
+
+/* GRID TARJETAS */
+.content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 2rem 5%;
+    flex: 1;
+}
+
+.card {
+    background: #f9f9f9;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease,
+    box-shadow 0.3s ease;
+    text-align: center;
+    position: relative;
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+.card h2 {
+    margin-top: 1rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+.card p {
+    color: #666;
+    padding: 0.5rem 1rem 1.5rem;
+    font-size: 0.95rem;
+}
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+/* BOTÓN VER MÁS */
+.btn-more {
+    display: none;
+    margin-bottom: 1rem;
+    padding: 0.6rem 1.2rem;
+    border: none;
+    border-radius: 8px;
+    background-color: #e50914;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+.btn-more:hover {
+    background-color: #b0060f;
+}
+.card:hover .btn-more {
+    display: inline-block;
+}
+
+/* FOOTER */
+footer {
+    background: #fafafa;
+    text-align: center;
+    padding: 1.5rem 0;
+    border-top: 1px solid
+    #eee;
+}
+footer p {
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.social-icon{
+  width:30px;
+  height:30px;
+  object-fit:contain;
+  transition:transform .2s ease;
+  display: flex;
+  gap: 12px;
+  align-items: center; 
+  justify-items: center;
+}
+
+.footer-social a:hover .social-icon{
+  transform:scale(1.2);
+}
+
+
+/* MODO OSCURO */
+.dark-mode { 
+    background-color: 
+    #111; color: 
+    #eee; 
+}
+.dark-mode header p, .dark-mode footer p, .dark-mode .card p 
+{ 
+    color: #ccc; 
+}
+.dark-mode .card { 
+    background-color: #222;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3); 
+}
+.dark-mode .btn-more {
+    background-color: #ff3b3b;
+}
+.dark-mode .btn-more:hover {
+    background-color: #ff1a1a;
+}
